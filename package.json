@@ -1,0 +1,48 @@
+{
+  "name": "koa-file-upload",
+  "version": "1.0.0",
+  "description": "文件上传实现",
+  "main": "index.js",
+  "scripts": {
+    "local": "NODE_ENV='local' nodemon ./server/app.js",
+    "lint": "standard",
+    "lint-fix": "standard --fix",
+    "validate": "npm ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qianlongo/koa-file-upload.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qianlongo/koa-file-upload/issues"
+  },
+  "homepage": "https://github.com/qianlongo/koa-file-upload#readme",
+  "nodemonConfig": {
+    "ignore": [
+      "dist/*",
+      "client/*",
+      "build/*",
+      "node_modules/",
+      ".git/",
+      ".vscode/",
+      "cache/",
+      "log/"
+    ]
+  },
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "pure-koa-router": "^1.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "precommit-hook": "^3.0.0",
+    "standard": "^12.0.1"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}
